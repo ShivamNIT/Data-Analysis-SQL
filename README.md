@@ -43,3 +43,32 @@ ORDER BY Total DESC;
 FROM Healthcare
 GROUP BY Medical;
 <img width="281" alt="image" src="https://github.com/ShivamNIT/Data-Analysis-SQL/assets/97026504/8a8b535f-e928-4889-bbee-b56134ea15b2">
+
+- SELECT Name, Medical, ROUND(BillingAmount,2) as BillingAmount, Hospital, DATEDIFF(DischargeDate, AdmissionDate) as Total_Hospitalized_days
+FROM Healthcare;
+ <img width="578" alt="image" src="https://github.com/ShivamNIT/Data-Analysis-SQL/assets/97026504/a28e3e75-a911-459f-b404-02bf96000842">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
