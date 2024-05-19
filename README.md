@@ -70,5 +70,3 @@ FROM Healthcare;
 
 
 
-
-
