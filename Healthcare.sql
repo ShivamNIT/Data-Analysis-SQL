@@ -68,9 +68,9 @@ ORDER BY Total DESC;
     
 
 -- 11. Identifying Average Billing Amount by Medical Condition.
-SELECT Medical_Condition, ROUND(AVG(Billing_Amount),2) AS Avg_Billing_Amount
+SELECT Medical, ROUND(AVG(BillingAmount),2) AS Avg_Billing_Amount
 FROM Healthcare
-GROUP BY Medical_Condition;
+GROUP BY Medical;
 	-- Findings :  It offers insights into the typical costs associated with various medical conditions. This information can be valuable for analyzing the financial impact of different health issues, identifying expensive conditions, or assisting in resource allocation within healthcare facilities.
     
 
