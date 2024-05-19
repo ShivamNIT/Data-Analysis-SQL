@@ -82,7 +82,7 @@ ORDER BY Medical_Condition;
  
  
 -- 13. Finding Total number of days sepnt by patient in an hospital for given medical condition
-SELECT Name, Medical_Condition, ROUND(Billing_Amount,2) as Billing_Amount, Hospital, DATEDIFF(Discharge_Date, Date_of_Admission) as Total_Hospitalized_days
+SELECT Name, Medical, ROUND(BillingAmount,2) as BillingAmount, Hospital, DATEDIFF(DischargeDate, AdmissionDate) as Total_Hospitalized_days
 FROM Healthcare;
 	-- Findings : This query retrieves a dataset showing the names of patients, their respective medical conditions, billed amounts (rounded to two decimal places), the hospitals they visited, and the duration of their hospital stay in days. Insights gleaned include: 
 		-- Individual Patient Details: It presents a comprehensive view of patients, their medical conditions, billed amounts, and hospitals involved, aiding in understanding the scope of medical services availed by patients.
