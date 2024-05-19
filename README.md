@@ -39,3 +39,7 @@ GROUP BY Hospital
 ORDER BY Total DESC;
 <img width="617" alt="image" src="https://github.com/ShivamNIT/Data-Analysis-SQL/assets/97026504/af77bfc7-2529-4be7-a7d8-915815b0a957">
 
+- SELECT Medical, ROUND(AVG(BillingAmount),2) AS Avg_Billing_Amount
+FROM Healthcare
+GROUP BY Medical;
+<img width="281" alt="image" src="https://github.com/ShivamNIT/Data-Analysis-SQL/assets/97026504/8a8b535f-e928-4889-bbee-b56134ea15b2">
