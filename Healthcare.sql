@@ -49,18 +49,12 @@ GROUP BY Medical_Condition
 ORDER BY Total_patients DESC;
 	-- Findings : This query retrieves a breakdown of medical conditions recorded in a healthcare dataset along with the total number of patients diagnosed with each condition. It groups the data by distinct medical conditions, counting the occurrences of each condition across the dataset. The result is presented in descending order based on the total number of patients affected by each medical condition, providing an insight into the prevalence or frequency of various health issues within the dataset
 
--- 8. Finding Rank & Maximum number of medicines recommended to patients based on Medical Condition pertaining to them.    
-SELECT Medical_Condition, Medication, COUNT(medication) as Total_Medications_to_Patients, RANK() OVER(PARTITION BY Medical_Condition ORDER BY COUNT(medication) DESC) as Rank_Medicine
-FROM Healthcare
-GROUP BY 1,2
-ORDER BY 1; 
-	-- Finding : The output provides insight into the most common medications used for various medical conditions, assigning a rank to each medication based on how frequently its prescribed within its corresponding condition.
-    
+
 
 -- 9. Most preffered Insurance Provide  by Patients Hospatilized
-SELECT Insurance_Provider, COUNT(Insurance_Provider) AS Total 
+SELECT InsuranceProvider, COUNT(InsuranceProvider) AS Total 
 FROM Healthcare
-GROUP BY Insurance_Provider
+GROUP BY InsuranceProvider
 ORDER BY Total DESC;
 	-- Findings : This information helps identify the most prevalent insurance providers among the patient population, offering valuable data for resource allocation, understanding coverage preferences, and potentially indicating trends in healthcare accessibility based on insurance networks
     
