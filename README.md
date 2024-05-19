@@ -1,13 +1,13 @@
 # Analysing Healthcare Dataset using SQL
 
 - SELECT COUNT(*) FROM Healthcare;
-   ![image](./Public/Count.png)
-  
+  <img width="110" alt="Count" src="https://github.com/ShivamNIT/Data-Analysis-SQL/assets/97026504/c3c94835-2f4a-4616-8994-5d4c206a9629">
+
 - select max(age) as Maximum_Age from Healthcare;
-  ![image](./Public/Maximum_Age.png)
+<img width="119" alt="Maximum_Age" src="https://github.com/ShivamNIT/Data-Analysis-SQL/assets/97026504/73edeeb6-9f5c-4b09-af9b-e98780974a51">
 
 - Select round(avg(age),0) as Average_Age from Healthcare;
-   ![image](./Public/Avg_Age.png)
+<img width="119" alt="Avg_Age" src="https://github.com/ShivamNIT/Data-Analysis-SQL/assets/97026504/89e7229e-f216-4347-bec4-2ca21b81d2f1">
 
 - SELECT AGE, COUNT(AGE) AS Total
 FROM Healthcare
@@ -19,5 +19,23 @@ ORDER BY AGE DESC;
 FROM Healthcare
 GROUP BY age
 ORDER BY Total DESC,age DESC;
-![image](./Public/Age_Count2.png)
+<img width="389" alt="Age_Count2" src="https://github.com/ShivamNIT/Data-Analysis-SQL/assets/97026504/a46302ab-b1ba-4296-b2df-a26c81fded7a">
+
+- SELECT AGE, COUNT(AGE) As Total, dense_RANK() OVER(ORDER BY COUNT(AGE) DESC, age DESC) as Ranking_Admitted 
+FROM Healthcare
+GROUP BY age
+HAVING Total > Avg(age);
+<img width="564" alt="Ranking" src="https://github.com/ShivamNIT/Data-Analysis-SQL/assets/97026504/0bcfd2c5-808d-4f5f-9aca-2df5b0c0cf1c">
+
+- SELECT Insurance_Provider, COUNT(Insurance_Provider) AS Total 
+FROM Healthcare
+GROUP BY Insurance_Provider
+ORDER BY Total DESC;
+<img width="164" alt="image" src="https://github.com/ShivamNIT/Data-Analysis-SQL/assets/97026504/c5deb274-7a68-4499-8014-457ef0cd06bc">
+
+- SELECT Hospital, COUNT(hospital) AS Total 
+FROM Healthcare
+GROUP BY Hospital
+ORDER BY Total DESC;
+<img width="617" alt="image" src="https://github.com/ShivamNIT/Data-Analysis-SQL/assets/97026504/af77bfc7-2529-4be7-a7d8-915815b0a957">
 
